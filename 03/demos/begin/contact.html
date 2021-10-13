@@ -38,7 +38,38 @@
         </aside>
         <main id="main">
            <h1>Contact Us</h1>
-           
+           <form action="contact.html" method="POST" enctype="application/x-www-form-urlencoded">
+                Your Name: <input type="text" name="customerName"> <br>
+                Your Email: <input type="email" name="customerEmail"> <br>
+                Your Phone: <input type="tel" name="customerTel"> <br>
+                <input type="radio" name="phonetype" value="cell"> Cell 
+                <input type="radio" name="phonetype" value="work"> Work
+                <input type="radio" name="phonetype" value="home"> Home 
+
+                
+                <input type="hidden" name="source" value="ContactForm">
+                Ok to Contact Me: 
+                <input type="checkbox" name="okToContact" value="phone"> By Phone
+                <input type="checkbox" name="okToContact" value="email"> By Email
+
+                Your Feedback: <br> <textarea name="feedbackText" cols="40" rows="3"> </textarea> <br> 
+                Feedback Type: <select name="feedbackType">
+                <optgroup label="Stores"> 
+                    <option value="webstore"> Web Store</option>    
+                    <option value="store"> Physical Store</option>
+                </optgroup>
+
+                <select name="feedbackType" multiple="multiple" size="6">
+                    <option value="webTech"> Website Issue </option>
+                    <option value="general"> General Feedback </option>     
+                </select>
+                
+                Severity: <input type="number" name="Severity"> <br>
+                Issue Date: <input type="date" name="issueDate"> <br>
+                Issue Time: <input type="time" name="issueTime"> <br>
+                
+                <input type="submit"  value="SendContact">
+        </form>
         </main>
 
         <footer>
